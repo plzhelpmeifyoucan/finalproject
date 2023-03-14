@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ticketBuyMapper">
+
+<insert id="insert">
+INSERT INTO sae_buyticket (
+	bt_bno,
+   bt_pno ,
+   bt_price ,
+   bt_count ,
+   bt_id,
+   bt_age )
+  			   VALUES (sae_buyticket_seq.nextval,
+  			  		   #{bt_pno},
+  			   		   #{bt_price},
+  			   		   #{bt_count},
+  			   		   #{bt_id},
+  			   		   #{bt_age}
+  					  )
+</insert>
+
+
+<!-- 예약 내역 확인 -->
+<select id ="booklist" parameterType="String" resultType="ticketBuyVO" >
+SELECT * FROM sae_buyticket
+where bt_id = #{bt_id}
+</select>
+	   	 
+<!-- 예약 취소 -->
+<delete id="delete" parameterType="int">
+DELETE FROM sae_buyticket
+WHERE bt_bno = #{bt_bno}
+</delete>
+<!--  예약 전체 취소 -->
+<delete id="alldelete" parameterType="String">
+DELETE FROM sae_buyticket
+WHERE bt_id = #{bt_id}
+</delete>
+
+</mapper>
