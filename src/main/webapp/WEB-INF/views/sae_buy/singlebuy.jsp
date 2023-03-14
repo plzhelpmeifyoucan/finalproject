@@ -175,7 +175,7 @@ input{border: none;}
 <td>상품가격</td>
 </tr>
  <tr style=" border-bottom: 0.5px solid #eee;">
-    <td style="padding:10px 0;width:80px;height: 100px;background-color: orange;"><img src="/resources/productimg/${img}"/></td>
+    <td style="padding:10px 0;width:80px;height: 100px;background-color: orange;"><img height="100px" width="100px" src="/resources/productimg/${img}"/></td>
      <td style="padding:10px 0;"><input
 				type="text" id="pd_name" name="by_name" 
 				value="${buylist.pd_name }" readonly="readonly" /></td>

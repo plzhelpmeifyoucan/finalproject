@@ -35,7 +35,7 @@ public class GoodsBoardController {
 
 	private static final Logger logger = LoggerFactory.getLogger(GoodsBoardController.class);
 
-	private static final String CURR_IMAGE_REPO_PATH = "C:\\Spring_1123\\spring_git\\SHMN\\saeha\\src\\main\\webapp\\resources\\reviewimg\\";
+	private static final String CURR_IMAGE_REPO_PATH = "C:\\spring_1123\\workspace_1\\saeha\\src\\main\\webapp\\resources\\reviewimg\\";
 
 	@Inject
 	GoodsBoardService service;

@@ -197,9 +197,8 @@ var form;
 <tr style="height: 50px;
     border-top: 2px solid #333;
     border-bottom: 1px solid #444;">
-<td>번호</td>
 <td colspan="2">제품정보</td>
-<td>수량</td>
+<td>수량/재고</td>
 <td>상품가격</td>
 <td>총 가격</td>
 <td>삭제</td>
@@ -215,7 +214,6 @@ var form;
 							} 
 							%>
  <tr style=" border-bottom: 0.5px solid #eee;">
-    <td style="padding:10px 0;">1</td>
     <td style="padding:10px 0;width:80px;height: 100px;background-color: orange;"><a href="/sae_product/read?pd_bno=<%=ct.getCt_pno()%>"><img height="100px" width="100px"
 								 src="/resources/productimg/<%=ct.getP_filepath() %>"></a></td>
      <td style="padding:10px 0;">
@@ -225,8 +223,8 @@ var form;
 							
 		</td>
      <td style="padding:10px 0;">
-     <input name="buyvolist[<%=i %>].by_count" type="number" class="count<%=i %>"  value="<%= ct.getCt_count()%>" max="<%= ct.getCt_stock()%>" style="text-align:center">/
-     <input id="input" class="stock<%=i %>" type="text" value="<%= ct.getCt_stock()%>" readonly="readonly" style="text-align:center"></td>
+     <input name="buyvolist[<%=i %>].by_count" type="number" class="count<%=i %>"  value="<%= ct.getCt_count()%>" max="<%= ct.getCt_stock()%>" style="text-align:center; width: 60px;">/
+     <input id="input" class="stock<%=i %>" type="text" value="<%= ct.getCt_stock()%>" readonly="readonly" style="text-align:center; width: 60px;"></td>
      <td style="padding:10px 0;">
      <input id="input" class="price<%=i %>" type="text" value="<%= ct.getCt_price()%>" readonly="readonly" style="text-align:center">
 	</td>
@@ -245,7 +243,6 @@ var form;
 <div style="display: flex; border-top: 2px solid #444;border-bottom: 2px solid #444;padding: 20px 0;justify-content: center;">
 <div style="width: 50%; font-size: x-large;font-weight: 600;"> 총 주문금액</div>
 <div style="width:40%;">
-  <div style="display: flex; justify-content: space-between;padding: 10px 0;">주문상품 수 <span>3개</span></div>
   <div style="display: flex; justify-content: space-between;padding: 10px 0;">주문금액 <span><input type="text" style="text-align:center" id="finalinput" class="totaltotal" readonly="readonly"></span></div>
   <div style="display: flex; justify-content: space-between;padding: 10px 0;">
   <select class="coupon" name="coupon_price">
